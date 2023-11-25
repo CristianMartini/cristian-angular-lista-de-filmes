@@ -1,0 +1,49 @@
+** baixou um projeto novo , antes de testar use**
+->  npm install
+
+** para criar um angular novo **
+->  npm init @angular nomedoProjeto
+
+**para instalar o angular material usa-se este comando**
+->  npm install @angular/material
+https://material.angular.io/guide/getting-started
+
+
+->> copia o import (import { MatSlideToggleModule } from '@angular/material/slide-toggle';)->>
+->> coloca em app module-ts
+ em import  coloca ->> MatSlideToggleModule ->>
+ no html ->> <mat-slide-toggle>Toggle me!</mat-slide-toggle>->>
+
+ depois vai em css e coloca o prebuit
+ ->> @import "@angular/material/prebuilt-themes/indigo-pink.css"
+
+pra escolher outro  vai em componetes
+ escolhe um ,
+add
+o import no arqui
+vo TS
+ ->>import {MatChipsModule} from '@angular/material/chips';->>
+ depois  coloca o codigo  html
+
+->> para criar um novo module
+->>  npx ng g c myDialog
+
+criou
+no componet ts
+->> import {MatDialogRef  } from '@angular/material/dialog'
+ cria um construtor
+export class MyDialogComponent {
+  constructor (public dialogRef: MatDialogRef<MyDialogComponent>)
+ {
+
+ }
+
+}
+depois   em app componet ts do
+arquivo principal importa
+ o ->>import { MatDialog } from '@angular/material/dialog'
+import { MyDialogComponent } from './my-dialog/my-dialog.component';
+
+no app module ts
+import { MyDialogComponent } from './my-dialog/my-dialog.component';
+import { MatDialogModule } from "@angular/material/dialog";
